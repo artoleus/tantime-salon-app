@@ -1,0 +1,372 @@
+
+> nextn@0.1.0 dev
+> next dev --turbopack -p 9002
+
+   ▲ Next.js 15.3.3 (Turbopack)
+   - Local:        http://localhost:9002
+   - Network:      http://192.168.86.26:9002
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1101ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4s
+ GET / 200 in 4556ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 683ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 951ms
+   Reload env: .env.local
+ GET / 200 in 844ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 258ms
+ ✓ Compiled in 134ms
+ ✓ Compiled in 34ms
+ ✓ Compiled in 276ms
+ GET / 200 in 478ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 260ms
+ ✓ Compiled in 115ms
+ ✓ Compiled in 118ms
+ ✓ Compiled in 1430ms
+ ✓ Compiled / in 38ms
+ GET / 200 in 147ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 249ms
+ GET / 200 in 370ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 234ms
+ ✓ Compiled in 395ms
+ GET / 200 in 506ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 225ms
+ ✓ Compiled in 158ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload when ./src/contexts/auth-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 24ms
+ GET / 200 in 406ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 235ms
+ ✓ Compiled in 62ms
+ ✓ Compiled in 82ms
+ ✓ Compiled in 79ms
+ ✓ Compiled in 64ms
+ ✓ Compiled in 59ms
+ ✓ Compiled in 31ms
+ ✓ Compiled in 48ms
+ GET / 200 in 383ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 261ms
+ GET / 200 in 132ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 249ms
+ GET / 200 in 98ms
+ GET / 200 in 107ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 233ms
+ GET / 200 in 129ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 220ms
+ ✓ Compiled in 79ms
+ ✓ Compiled in 49ms
+ ✓ Compiled in 26ms
+ ✓ Compiled in 68ms
+ ✓ Compiled in 70ms
+ ✓ Compiled in 97ms
+ GET / 200 in 388ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 227ms
+ ⚠ Fast Refresh had to perform a full reload when ./src/lib/firebase.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled / in 102ms
+ GET / 200 in 280ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 588ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 231ms
+ ✓ Compiled in 164ms
+ ✓ Compiled / in 19ms
+ GET / 200 in 119ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 222ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 412ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 231ms
+ ✓ Compiled in 174ms
+ ✓ Compiled in 164ms
+ ⚠ Fast Refresh had to perform a full reload when ./src/lib/firebase.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 642ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 235ms
+ ✓ Compiled in 396ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 528ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 520ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 230ms
+ ✓ Compiled in 88ms
+ ✓ Compiled in 74ms
+ ✓ Compiled in 149ms
+ ✓ Compiled in 217ms
+ ✓ Compiled / in 24ms
+ GET / 200 in 174ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 218ms
+ ✓ Compiled in 219ms
+ ✓ Compiled / in 20ms
+ GET / 200 in 171ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 218ms
+ ✓ Compiled in 213ms
+ ✓ Compiled / in 16ms
+ GET / 200 in 137ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 315ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 230ms
+ GET / 200 in 107ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 226ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 200ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 458ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 235ms
+ ✓ Compiled in 515ms
+ ✓ Compiled in 175ms
+ ✓ Compiled in 571ms
+ ✓ Compiled in 171ms
+ ✓ Compiled in 114ms
+ ✓ Compiled in 195ms
+ ✓ Compiled in 540ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 534ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ ⨯ ReferenceError: realtimeListeners is not defined
+    at useAdmin (src/hooks/use-admin.ts:292:6)
+    at Home (src/app/page.tsx:27:29)
+  290 |       window.removeEventListener('auth:signout', handleSignOut);
+  291 |     };
+> 292 |   }, [realtimeListeners]);
+      |      ^
+  293 |
+  294 |   return {
+  295 |     isAdmin: isAdmin(), {
+  digest: '1852124266'
+}
+ GET / 500 in 522ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 282ms
+ GET /favicon.ico 200 in 236ms
+ ✓ Compiled in 267ms
+ ✓ Compiled in 338ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled / in 134ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ ⨯ ReferenceError: realtimeListeners is not defined
+    at useAdmin (src/hooks/use-admin.ts:292:6)
+    at Home (src/app/page.tsx:27:29)
+  290 |       window.removeEventListener('auth:signout', handleSignOut);
+  291 |     };
+> 292 |   }, [realtimeListeners]);
+      |      ^
+  293 |
+  294 |   return {
+  295 |     isAdmin: isAdmin(), {
+  digest: '610352556'
+}
+ ⨯ ReferenceError: realtimeListeners is not defined
+    at useAdmin (src/hooks/use-admin.ts:292:6)
+    at Home (src/app/page.tsx:27:29)
+  290 |       window.removeEventListener('auth:signout', handleSignOut);
+  291 |     };
+> 292 |   }, [realtimeListeners]);
+      |      ^
+  293 |
+  294 |   return {
+  295 |     isAdmin: isAdmin(), {
+  digest: '610352556'
+}
+ GET / 500 in 503ms
+ GET /favicon.ico 200 in 240ms
+ ✓ Compiled in 287ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 325ms
+ ✓ Compiled / in 142ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 474ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 229ms
+ ✓ Compiled in 280ms
+ ✓ Compiled / in 26ms
+ GET / 200 in 155ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 253ms
+ ✓ Compiled in 99ms
+ ⚠ Fast Refresh had to perform a full reload when ./src/contexts/auth-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 178ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 567ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 241ms
+ ⚠ Fast Refresh had to perform a full reload when ./src/contexts/auth-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 93ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 464ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 227ms
+ ⚠ Fast Refresh had to perform a full reload when ./src/contexts/auth-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 102ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 366ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 225ms
+ ⚠ Fast Refresh had to perform a full reload when ./src/contexts/auth-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 174ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 399ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 311ms
+ ✓ Compiled in 485ms
+ ✓ Compiled in 79ms
+ ✓ Compiled in 146ms
+ ✓ Compiled in 66ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 474ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 274ms
+ ✓ Compiled in 86ms
+ ✓ Compiled in 81ms
+ ✓ Compiled in 70ms
+ ✓ Compiled in 82ms
+ ✓ Compiled in 357ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 436ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 223ms
+ ✓ Compiled in 165ms
+ ✓ Compiled in 113ms
+ ✓ Compiled in 184ms
+ ✓ Compiled in 144ms
+ ✓ Compiled in 122ms
+ ✓ Compiled in 134ms
+ ✓ Compiled in 143ms
+ ✓ Compiled in 126ms
+ ✓ Compiled in 151ms
+ ✓ Compiled in 244ms
+ ✓ Compiled in 130ms
+ ✓ Compiled in 151ms
+ ✓ Compiled in 911ms
+ ✓ Compiled in 180ms
+ ✓ Compiled in 139ms
+ ✓ Compiled in 459ms
+ ✓ Compiled in 424ms
+ ✓ Compiled in 446ms
+ ✓ Compiled in 132ms
+ ✓ Compiled in 164ms
+ ✓ Compiled in 119ms
+ ✓ Compiled in 119ms
+ ✓ Compiled in 169ms
+ ✓ Compiled in 142ms
+ ✓ Compiled in 135ms
+ ✓ Compiled in 317ms
+ ✓ Compiled in 314ms
+ ✓ Compiled / in 50ms
+ GET / 200 in 247ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 237ms
+ ✓ Compiled in 126ms
+ ✓ Compiled in 153ms
+ ✓ Compiled in 179ms
+ ✓ Compiled in 173ms
+ ✓ Compiled in 92ms
+ ✓ Compiled in 138ms
+ ✓ Compiled in 120ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 536ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 232ms
+ GET / 200 in 131ms
