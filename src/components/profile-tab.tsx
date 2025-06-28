@@ -13,35 +13,35 @@ import { Separator } from "./ui/separator";
 import { ScrollArea } from "./ui/scroll-area";
 
 const PROMO_CODES: { [key: string]: number } = {
-  "LOTION20": 0.20, // 20% off
-  "5HOURS": 0.10,   // 10% off
+  "LOTION20": 0.20,     // 20% off
+  "10SESSIONS": 0.10,   // 10% off
 };
 
 
 type ProfileTabProps = {
-  onPurchase: (hours: number, amount: number) => void;
+  onPurchase: (sessions: number, amount: number) => void;
   purchaseHistory: Array<{
     id: string;
     date: string;
-    hours: number;
+    sessions: number;
     amount: number;
   }>;
 };
 
 export function ProfileTab({ onPurchase, purchaseHistory }: ProfileTabProps) {
   const { toast } = useToast();
-  const [customHours, setCustomHours] = useState(1);
-  const pricePerHour = 10;
+  const [customSessions, setCustomSessions] = useState(1);
+  const pricePerSession = 2.50; // $2.50 per 15-minute session
   
   const [promoCode, setPromoCode] = useState("");
   const [discount, setDiscount] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(customHours * pricePerHour);
+  const [totalPrice, setTotalPrice] = useState(customSessions * pricePerSession);
 
   useEffect(() => {
-    const basePrice = customHours * pricePerHour;
+    const basePrice = customSessions * pricePerSession;
     const finalPrice = basePrice * (1 - discount);
     setTotalPrice(finalPrice);
-  }, [customHours, discount]);
+  }, [customSessions, discount]);
 
   const handleApplyPromo = () => {
     const code = promoCode.toUpperCase();
@@ -65,10 +65,11 @@ export function ProfileTab({ onPurchase, purchaseHistory }: ProfileTabProps) {
 
   const handlePurchase = async () => {
     try {
-      await onPurchase(customHours, totalPrice);
+      await onPurchase(customSessions, totalPrice);
+      const totalMinutes = customSessions * 15;
       toast({
         title: "Purchase Successful!",
-        description: `You've added ${customHours} ${customHours === 1 ? 'hour' : 'hours'}. Your new balance is reflected on the Overview tab.`,
+        description: `You've added ${customSessions} ${customSessions === 1 ? 'session' : 'sessions'} (${totalMinutes} minutes). Your new balance is reflected on the Overview tab.`,
       });
     } catch (error) {
       toast({
@@ -81,8 +82,7 @@ export function ProfileTab({ onPurchase, purchaseHistory }: ProfileTabProps) {
 
   const handlePayAsYouGo = async () => {
     try {
-      const sessionPrice = 2.50; // $2.50 for 15 minutes
-      await onPurchase(0.25, sessionPrice);
+      await onPurchase(1, pricePerSession); // 1 session = 15 minutes
       toast({
         title: "Pay-As-You-Go Session Purchased!",
         description: "You've purchased a 15-minute session for $2.50. You can now scan to start your session.",
@@ -168,16 +168,19 @@ export function ProfileTab({ onPurchase, purchaseHistory }: ProfileTabProps) {
 
         <Card className="shadow-md">
             <CardHeader>
-            <CardTitle className="font-headline text-2xl flex items-center gap-2"><Wallet className="text-primary"/>Purchase Hours</CardTitle>
-            <CardDescription>Top up your tanning time. Payments powered by Stripe.</CardDescription>
+            <CardTitle className="font-headline text-2xl flex items-center gap-2"><Wallet className="text-primary"/>Purchase Sessions</CardTitle>
+            <CardDescription>Top up your tanning time. Each session is 15 minutes. Payments powered by Stripe.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
                 <div className="space-y-4">
-                    <Label htmlFor="hours-input" className="text-base">Choose hours (1-5)</Label>
+                    <Label htmlFor="sessions-input" className="text-base">Choose sessions (1-20)</Label>
                     <div className="flex items-center gap-4">
-                        <Slider id="hours-slider" value={[customHours]} onValueChange={(value) => setCustomHours(value[0])} min={1} max={5} step={1} className="w-full"/>
-                        <Input id="hours-input" type="number" value={customHours} onChange={(e) => setCustomHours(Math.max(1, Math.min(5, Number(e.target.value) || 1)))} className="w-20 text-center font-bold text-lg"/>
+                        <Slider id="sessions-slider" value={[customSessions]} onValueChange={(value) => setCustomSessions(value[0])} min={1} max={20} step={1} className="w-full"/>
+                        <Input id="sessions-input" type="number" value={customSessions} onChange={(e) => setCustomSessions(Math.max(1, Math.min(20, Number(e.target.value) || 1)))} className="w-20 text-center font-bold text-lg"/>
                     </div>
+                    <p className="text-sm text-muted-foreground">
+                      {customSessions} {customSessions === 1 ? 'session' : 'sessions'} = {customSessions * 15} minutes
+                    </p>
                 </div>
 
                 <Separator/>
@@ -206,7 +209,7 @@ export function ProfileTab({ onPurchase, purchaseHistory }: ProfileTabProps) {
                 <div className="text-center bg-secondary/50 p-4 rounded-lg">
                     <p className="text-sm text-muted-foreground font-headline">Total Price</p>
                     {discount > 0 && (
-                    <p className="text-sm text-muted-foreground line-through">${(customHours * pricePerHour).toFixed(2)}</p>
+                    <p className="text-sm text-muted-foreground line-through">${(customSessions * pricePerSession).toFixed(2)}</p>
                     )}
                     <p className="text-4xl font-headline font-bold text-primary">${totalPrice.toFixed(2)}</p>
                     {discount > 0 && (
@@ -224,7 +227,7 @@ export function ProfileTab({ onPurchase, purchaseHistory }: ProfileTabProps) {
       <Card className="shadow-md">
         <CardHeader>
             <CardTitle className="font-headline text-2xl flex items-center gap-2"><History className="text-primary"/>Purchase History</CardTitle>
-            <CardDescription>View your past tanning hour purchases.</CardDescription>
+            <CardDescription>View your past tanning session purchases.</CardDescription>
         </CardHeader>
         <CardContent>
             <ScrollArea className="h-72 w-full pr-4">
@@ -236,7 +239,7 @@ export function ProfileTab({ onPurchase, purchaseHistory }: ProfileTabProps) {
                         <React.Fragment key={item.id}>
                             <div className="flex justify-between items-center">
                                 <div>
-                                    <p className="font-semibold">{item.hours} {item.hours === 1 ? 'hour' : 'hours'}</p>
+                                    <p className="font-semibold">{item.sessions} {item.sessions === 1 ? 'session' : 'sessions'} ({item.sessions * 15} min)</p>
                                     <p className="text-sm text-muted-foreground">{new Date(item.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</p>
                                 </div>
                                 <p className="font-bold text-lg">${item.amount.toFixed(2)}</p>

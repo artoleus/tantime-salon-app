@@ -11,7 +11,16 @@
       "Bash(curl:*)",
       "Bash(ss:*)",
       "Bash(find:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git push:*)",
+      "Bash(git restore:*)",
+      "Bash(grep:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm run lint)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }

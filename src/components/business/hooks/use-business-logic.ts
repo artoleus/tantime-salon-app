@@ -26,7 +26,7 @@ export function useBusinessLogic() {
   const [chartPeriod, setChartPeriod] = useState<'7' | '30' | '90'>('30');
 
   useEffect(() => {
-    if (isAdmin) {
+    if (isAdmin()) {
       setupRealtimeListeners();
     }
   }, [isAdmin, setupRealtimeListeners]);

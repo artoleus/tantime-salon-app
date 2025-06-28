@@ -32,14 +32,14 @@ type Promotion = {
 
 const promotions: Promotion[] = [
   {
-    title: "20% Off Tanning Hours",
-    description: "Get a 20% discount on any tanning hours package.",
+    title: "20% Off Tanning Sessions",
+    description: "Get a 20% discount on any tanning session package.",
     code: "LOTION20",
   },
   {
-    title: "10% Off 5+ Hours",
-    description: "Top up with 5 hours or more and get 10% off the total price.",
-    code: "5HOURS",
+    title: "10% Off 10+ Sessions",
+    description: "Top up with 10 sessions or more and get 10% off the total price.",
+    code: "10SESSIONS",
   },
   {
     title: "Bring a Friend for Free",
@@ -50,8 +50,8 @@ const promotions: Promotion[] = [
 ];
 
 type OverviewData = {
-  hoursUsedThisMonth: number;
-  remaining: number;
+  sessionsUsedThisMonth: number;
+  remainingSessions: number;
 };
 
 type OverviewTabProps = {
@@ -96,27 +96,33 @@ export function OverviewTab({
           >
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
-                Remaining Balance
+                Remaining Sessions
               </CardTitle>
               <Wallet className="h-5 w-5 text-primary" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold font-headline">
-                {overviewData.remaining.toFixed(1)} hrs
+                {overviewData.remainingSessions} sessions
+              </div>
+              <div className="text-sm text-muted-foreground">
+                {overviewData.remainingSessions * 15} minutes total
               </div>
               <p className="text-xs text-muted-foreground">
-                Click to purchase more hours.
+                Click to purchase more sessions.
               </p>
             </CardContent>
           </Card>
           <Card className="shadow-md transition-all hover:shadow-lg">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Hours Used This Month</CardTitle>
+              <CardTitle className="text-sm font-medium">Sessions Used This Month</CardTitle>
               <Hourglass className="h-5 w-5 text-accent" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold font-headline">
-                {overviewData.hoursUsedThisMonth.toFixed(1)} hrs
+                {overviewData.sessionsUsedThisMonth} sessions
+              </div>
+              <div className="text-sm text-muted-foreground">
+                {overviewData.sessionsUsedThisMonth * 15} minutes this month
               </div>
               <p className="text-xs text-muted-foreground">
                 Resets at the start of each month.

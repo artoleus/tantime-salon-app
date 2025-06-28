@@ -370,3 +370,51 @@ Initializing Firebase with config: {
  GET / 200 in 536ms
  GET /favicon.ico?favicon.56766c03.ico 200 in 232ms
  GET / 200 in 131ms
+ ✓ Compiled in 1290ms
+ ○ Compiling / ...
+ ✓ Compiled / in 12.7s
+ GET / 200 in 12843ms
+ ✓ Compiled in 132ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 398ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 224ms
+ ✓ Compiled in 655ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 540ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 243ms
+ ✓ Compiled in 721ms
+ ✓ Compiled in 163ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 165ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 435ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 263ms
+ ✓ Compiled in 114ms
+ ✓ Compiled in 149ms
+ ✓ Compiled in 143ms
+ ✓ Compiled in 130ms
+ ✓ Compiled in 165ms
+ ✓ Compiled in 107ms
+ ✓ Compiled in 120ms
+ ✓ Compiled in 158ms

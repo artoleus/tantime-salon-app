@@ -27,7 +27,9 @@ export default function Home() {
   const { isAdmin } = useAdmin();
   const [activeTab, setActiveTab] = useState("overview");
 
-  const handlePurchase = async (hours: number, amount: number) => {
+  const handlePurchase = async (sessions: number, amount: number) => {
+    // Convert sessions to hours for storage (1 session = 0.25 hours)
+    const hours = sessions * 0.25;
     await addPurchase(hours, amount);
   };
 
@@ -36,7 +38,7 @@ export default function Home() {
   };
 
   const handleInsufficientFunds = () => {
-    // Redirect to profile tab for purchasing more hours
+    // Redirect to profile tab for purchasing more sessions
     setActiveTab("profile");
   };
 
@@ -140,8 +142,8 @@ export default function Home() {
             <TabsContent value="overview">
               <OverviewTab
                 overviewData={{
-                  hoursUsedThisMonth: userData.hoursUsedThisMonth,
-                  remaining: userData.remaining,
+                  sessionsUsedThisMonth: Math.round((userData?.hoursUsedThisMonth || 0) / 0.25),
+                  remainingSessions: Math.round((userData?.remaining || 0) / 0.25),
                 }}
                 onPurchaseClick={() => setActiveTab("profile")}
               />
@@ -150,12 +152,18 @@ export default function Home() {
               <BookingTab />
             </TabsContent>
             <TabsContent value="profile">
-              <ProfileTab onPurchase={handlePurchase} purchaseHistory={userData.purchaseHistory} />
+              <ProfileTab 
+                onPurchase={handlePurchase} 
+                purchaseHistory={(userData?.purchaseHistory || []).map(item => ({
+                  ...item,
+                  sessions: Math.round(item.hours / 0.25) // Convert hours to sessions for display
+                }))} 
+              />
             </TabsContent>
             <TabsContent value="scan">
               <ScanTab 
                 onScanSuccess={handleScanSuccess} 
-                userBalance={userData.remaining}
+                userBalance={userData?.remaining || 0}
                 onInsufficientFunds={handleInsufficientFunds}
               />
             </TabsContent>
