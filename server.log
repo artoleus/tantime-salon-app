@@ -418,3 +418,14 @@ Initializing Firebase with config: {
  ✓ Compiled in 107ms
  ✓ Compiled in 120ms
  ✓ Compiled in 158ms
+Initializing Firebase with config: {
+  apiKey: 'AIzaSyDw0q...',
+  authDomain: 'tan-salon-app.firebaseapp.com',
+  projectId: 'tan-salon-app',
+  storageBucket: 'tan-salon-app.firebasestorage.app',
+  messagingSenderId: '685493050536',
+  appId: '1:685493050536:web:7fd1212cf89bf9d1d7369d'
+}
+ GET / 200 in 355ms
+ GET /favicon.ico?favicon.56766c03.ico 200 in 248ms
+ GET / 200 in 102ms

@@ -264,6 +264,28 @@ export function useAdmin() {
       .slice(0, limit);
   }, [allUsersData]);
 
+  // Define cleanup function
+  const cleanup = useCallback(() => {
+    unsubscribeRefs.current.forEach(unsubscribe => {
+      try {
+        unsubscribe();
+      } catch (error) {
+        console.error('Error cleaning up admin listener:', error);
+      }
+    });
+    unsubscribeRefs.current = [];
+    setAllUsersData([]);
+    setError(null);
+  }, []);
+
+  // Setup listeners on mount and when admin status changes
+  useEffect(() => {
+    if (isAdmin()) {
+      setupRealtimeListeners();
+    }
+    return () => cleanup(); // Cleanup on unmount or when isAdmin changes
+  }, [isAdmin, setupRealtimeListeners, cleanup]);
+
   // Cleanup listeners on unmount and sign out
   useEffect(() => {
     const cleanup = () => {
