@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "tan-salon-app"
+    "default": "tan-salon-app",
+    "production": "tan-salon-app",
+    "development": "tan-salon-app"
   }
 }
