@@ -43,3 +43,19 @@ next-env.d.ts
 # firebase
 firebase-debug.log
 firestore-debug.log
+
+# Editor temporary files
+*.kate-swp
+*.swp
+*.tmp
+
+# Development logs
+pglite-debug.log
+server.log
+
+# Google Cloud SDK (if downloaded locally)
+/y/
+/google-cloud-sdk/
+
+# Claude settings (keep local only)
+.claude/settings.local.json
